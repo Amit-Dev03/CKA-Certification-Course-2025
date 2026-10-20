@@ -139,7 +139,7 @@ Apply the updated YAML and verify that the **control plane node is running the p
 
 ## **Static Pods**  
 ### **What Are Static Pods?**  
-Static pods are **created and managed by the Kubelet** on a node, **not by the Kubernetes API server**.
+Static pods are the pods that are **created and managed by the Kubelet** on a node, **not by the Kubernetes API server**.
 
 ### **Why Do We Need Static Pods?**  
 - **Essential for Control Plane Components:** Kubernetes components like `kube-apiserver`, `etcd`, and `kube-scheduler` run as static pods.  
