@@ -144,6 +144,8 @@ Static pods are the pods that are **created and managed by the Kubelet** on a no
 ### **Why Do We Need Static Pods?**  
 - **Essential for Control Plane Components:** Kubernetes components like `kube-apiserver`, `etcd`, and `kube-scheduler` and `kube-controller-manager` run as static pods.  
 - **Guaranteed Scheduling:** They always run on a specific node, even if the API server is down.  
+> [!NOTE]
+> Run `kubectl get pods -n kube-system` to inspect the control plane's **static pods** (kubelet-created and managed). By default, all core control-plane components reside in the `kube-system` namespace.
 
 📌 **Static pods are defined in `/etc/kubernetes/manifests/`**. 
 
