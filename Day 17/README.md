@@ -255,7 +255,7 @@ spec:
     spec:
       affinity:
         nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution: #this is the effect in KOVE, here in node affinity it is declared beforehand
             nodeSelectorTerms:
             - matchExpressions:
               - key: storage
