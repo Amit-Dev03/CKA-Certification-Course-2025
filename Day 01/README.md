@@ -1,16 +1,5 @@
 # Day 1: Docker Fundamentals for Kubernetes | CKA Certification Course 2025
 
-## Video reference for Day 1 is the following:
-
-[![Watch the video](https://img.youtube.com/vi/r3QWVLeA5qM/maxresdefault.jpg)](https://youtu.be/r3QWVLeA5qM)
-
----
-## ⭐ Support the Project  
-If this **repository** helps you, give it a ⭐ to show your support and help others discover it! 
-
----
-
-
 ## **How Were Development and Deployment Done Before Docker? Why Do We Need Docker? What Challenges Does It Solve?**
 
 ![Alt text](/images/1a.png)
@@ -68,31 +57,6 @@ Docker revolutionizes development and deployment by introducing **containers**. 
 - These containers ensure consistency across all environments (development, testing, and production), solving compatibility issues and speeding up the software lifecycle.
 
 ---
-
-### **Understanding Docker Containers Through Shipping Containers**  
-
-When learning about Docker containers, a great way to understand their significance is by comparing them to **shipping containers**—one of the most revolutionary innovations in global trade.  
-
-Before standardized shipping containers, transporting goods was inefficient, requiring manual handling at every checkpoint. The introduction of **uniform, stackable containers** transformed the industry, enabling seamless transport across ships, trucks, and trains.  
-
-Similarly, before **Docker**, software deployment was inconsistent, with applications behaving differently on various systems due to dependency conflicts. Docker solved this by **standardizing software packaging**, ensuring that applications run the same way, regardless of the environment.  
-
-Just like shipping containers revolutionized logistics, **Docker containers revolutionized software deployment** by bringing **portability, isolation, scalability, and efficiency** to modern applications.  
-
-Now, let’s break down this analogy further:  
-
-### **Shipping Containers vs. Docker Containers**  
-
-| **Aspect**          | **Shipping Containers**                                                                                                           | **Docker Containers**                                                                                                          |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Standardization** | **Standardized sizes** (e.g., 20-foot and 40-foot containers) enable **seamless transport** across **ships, trains, and trucks**. | **Docker containers standardize** software packaging, bundling applications with **dependencies** into identical units that work across all environments. |
-| **Portability**     | Containers can be **transferred easily** between different **modes of transport**, ensuring goods remain **intact** across the supply chain. | Docker containers ensure applications can **run consistently** across **development, testing, and production** without compatibility issues. |
-| **Isolation**       | Each container **keeps goods separate**, protecting them from **damage, contamination, or theft** during transport.              | Docker containers **isolate applications and dependencies**, preventing **conflicts** while allowing multiple containers to **share resources**. |
-| **Scalability**     | Enables **efficient transportation** of goods in bulk, making it easy to **scale logistics operations** based on demand.         | Docker enables **scalable deployments**, supporting **microservices architectures** and **efficient resource utilization** in cloud environments. |
-| **Efficiency**      | **Standardized shipping** reduces **manual handling**, lowers **costs**, and improves **logistics efficiency**.                   | Docker **automates software deployment**, minimizes **setup errors**, and ensures **consistent performance** across different environments. |
-
----
-
 ## **Virtual Machines (VMs) vs Docker Architecture**
 1. VM Architecture  
    ``` Physical HW -> Hypervisor -> VM1[OS + App1], VM2[OS + App2]... ```
@@ -100,16 +64,15 @@ Now, let’s break down this analogy further:
 3. Docker Architecture  
   ``` Physical HW -> Hypervisor -> VM[OS + Docker Engine] -> Docker Engine -> Container1, Container2... ```
 
-| Feature                  | Virtual Machines (VMs)                        | Docker Containers                              |
-|--------------------------|-----------------------------------------------|-----------------------------------------------|
-| **Architecture**         | Full OS with hypervisor                      | Shares the host OS kernel                     |
-| **Weight**               | Heavyweight (includes guest OS)              | Lightweight (no guest OS)                     |
-| **Startup Time**         | Slow (minutes to boot a VM)                  | Fast (seconds to start a container)           |
-| **Resource Usage**       | High (duplicates OS for each VM)             | Low (shares host OS resources)                |
-| **Isolation**            | Full hardware-level isolation                | Process-level isolation                       |
-| **Deployment**           | Slower and resource-intensive                | Faster and efficient                          |
-| **Use Case**             | Running multiple OSs or legacy systems       | Cloud-native apps and microservices           |
-| **Example**              | Running Ubuntu on a Windows host (Hyper-V)   | Running an app in a containerized environment |
+
+| Feature | Virtual Machines (VMs) Setup | Docker Setup (Inside a VM) |
+| :--- | :--- | :--- |
+| **OS Layering** | Every App requires a dedicated Guest OS | All Containers share a single VM Guest OS |
+| **Resource Efficiency** | High overhead (OS duplicated per application) | Low overhead (Shared memory and CPU resources) |
+| **Startup Speed** | Slow (Minutes to boot a full virtual machine) | Instant (Seconds to launch a container process) |
+| **Isolation Type** | Hardware-level (Enforced by hypervisor) | Process-level (Enforced by Linux namespaces) |
+| **Best Match For** | Running entirely different operating systems | Packing microservices inside a secure VM node |
+
 
 ---
 
