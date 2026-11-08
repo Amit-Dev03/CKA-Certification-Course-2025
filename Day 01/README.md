@@ -94,8 +94,11 @@ Now, let’s break down this analogy further:
 ---
 
 ## **Virtual Machines (VMs) vs Docker Architecture**
+1. VM Architecture
+   Physical HW -> Hypervisor -> VM1[OS + App1], VM2[OS + App2]...
 
-![Alt text](/images/1c.png)
+2. Docker Architecture
+   Physical HW -> Hypervisor -> VM[OS + Docker Engine] -> Docker Engine -> Container1, Container2...
 
 | Feature                  | Virtual Machines (VMs)                        | Docker Containers                              |
 |--------------------------|-----------------------------------------------|-----------------------------------------------|
