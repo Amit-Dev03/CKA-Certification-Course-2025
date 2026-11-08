@@ -104,16 +104,6 @@ Docker revolutionizes development and deployment by introducing **containers**. 
 - **REST API:** Translates CLI commands (e.g., `docker run`) into HTTP requests for the Docker Daemon. This enables automation and integration with external tools.
 - **Docker Daemon:** The “engine” that handles pulling images, building containers, and other core functions.
 
-
-### **Using the Car Analogy**
-- **Docker CLI:** Like the **dashboard** of a car, where you interact with buttons and controls.  
-- **REST API:** Like the **wires**, transmitting instructions from the dashboard to the engine.  
-- **Docker Daemon:** Like the **engine**, performing tasks such as pulling images and running containers.
-
-![Alt text](/images/1e.png)
-
-This image visually represents the **Docker workflow**, illustrating how a developer builds, pushes, and deploys a Docker image across different environments.
-
 ### **Key Steps in the Workflow:**
 1. **Developer writes a Dockerfile** (stored in version control like Git).
 2. **Building the image:**  
