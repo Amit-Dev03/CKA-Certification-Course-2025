@@ -140,9 +140,3 @@ To view all containers on your system (both running and stopped):
 docker ps -a
 ```
 - This lists the container ID, name, status, and other metadata.
-
----
-
-### **Final Notes**
-These basic Docker commands lay the foundation for building, tagging, pushing, and running containerized applications. Experiment with them to gain hands-on experience and better understand how containers and images work together.
-
