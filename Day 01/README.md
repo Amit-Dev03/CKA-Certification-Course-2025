@@ -71,42 +71,23 @@ Docker revolutionizes development and deployment by introducing **containers**. 
 
 
 ---
-
-## **High-Level Workflow with Docker**
-
-![Alt text](/images/1d.png)
-
----
-
-## **Low-Level Workflow with Docker**
-
-### **Key Concepts:**
-1. **Docker Images:**  
-   The blueprints for containers, including code and dependencies.
-
-2. **Docker Containers:**  
-   The runnable instances created from images.
-
-3. **Docker Registries:**  
-   Storage locations for Docker images, such as Docker Hub.
-
-4. **Docker Engine:**  
-   The core component that powers Docker.
-
----
-
 ### **Docker Engine Components**
 - **Docker CLI:**  Acts as the dashboard, letting you issue commands.  
 - **REST API:** Translates CLI commands (e.g., `docker run`) into HTTP requests for the Docker Daemon. This enables automation and integration with external tools.
 - **Docker Daemon:** The “engine” that handles pulling images, building containers, and other core functions.
 
-### **Key Steps in the Workflow:**
-1. **Developer writes a Dockerfile** (stored in version control like Git).
-2. **Building the image:**  
-   - The developer runs `$ docker build`, which creates a **Docker Image** locally.
-3. **Pushing the image to a registry:**  
-   - The built image is uploaded (`$ docker push`) to a **Docker Registry** (like DockerHub, ECR, ACR, JFrog, Nexus).
-4. **Running containers in different environments:**  
-   - Other teams (like DevOps) **pull** the image (`$ docker pull`) and deploy it using `$ docker run` in:
-     - **Test environment** (VM in purple).
-     - **Production environment** (VM in blue).
+## **Docker vs Podman**
+
+Docker and Podman both run OCI containers and share most of the same CLI, so the real differences come down to architecture and ecosystem.
+
+### **Architecture**
+
+- **Docker** uses a client-server model. The `docker` CLI talks to `dockerd`, a long-running daemon that traditionally runs as root and manages all containers.
+- **Podman** is daemonless. Each container is a child process of the command that started it (forking model), with `conmon` supervising it. No central process to crash or attack.
+
+### **Security**
+
+- **Podman** is rootless by default, so a container escape lands you in an unprivileged user context rather than root. Docker supports rootless mode too, but it isn't the default and is less commonly used.
+- **Docker's** root daemon is a bigger attack surface (access to the Docker socket is effectively root on the host).
+
+
