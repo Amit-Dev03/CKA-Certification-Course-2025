@@ -20,7 +20,7 @@ Before Docker, the software lifecycle involved several manual and error-prone pr
 
 ---
 
-### **Challenges with Traditional Deployment Approaches:**  
+### **Challenges with Traditional Deployment Approaches:**  (Dependency -> ineffiecient resource utilization -> manual configuration -> lack of isolation)
 
 1. **Dependency Management:**  
    - Different operating systems, libraries, and configurations across environments lead to inconsistencies.  
@@ -28,13 +28,9 @@ Before Docker, the software lifecycle involved several manual and error-prone pr
 
 2. **Inefficient Resource Usage:**  
    - Running multiple Virtual Machines (VMs) for different applications increases overhead.  
-   - Hosting multiple applications on a single VM leads to resource contention.  
+   - Hosting multiple applications on a single VM leads to <span title="A VM has a limited amount of CPU, memory, disk I/O, and network capacity. When multiple applications share it, they compete for those resources. For example, a memory-heavy app could use most of the available RAM, leaving another app short of memory and causing it to slow down or crash. This is called resource contention. It can be reduced by setting resource limits, monitoring usage, or separating workloads across VMs or containers.">resource contention</span>.   
 
-3. **Complex & Error-Prone Deployment:**  
-   - Manual configurations across development, testing, and production environments introduce human errors.  
-   - Each environment may require different settings, leading to deployment failures.  
-
-4. **Lack of Isolation:**  
+3. **Lack of Isolation:**  
    - Applications running on the same VM can **conflict** due to shared dependencies, ports, or configurations.  
    - Example: Two applications requiring **different versions of the same library** can lead to unexpected failures.  
 
@@ -42,11 +38,11 @@ Before Docker, the software lifecycle involved several manual and error-prone pr
 
 ---
 
-## **What Is Docker?**
+## **What Is Docker?** (SPISE -> Standardized, portable, isolated, scalable, Effecient)
 
 ![Alt text](/images/1b.png)
 
-Docker revolutionizes development and deployment by introducing **containers**. Let’s compare:
+Docker revolutionizes development and deployment by introducing **containers**. Containers gave us 5 main principles : SPISE. Let’s compare:
 
 ### **Before Docker**
 - Applications were **manually loaded** into environments alongside their dependencies, leaving them vulnerable to configuration mismatches between development, testing, and production environments.  
