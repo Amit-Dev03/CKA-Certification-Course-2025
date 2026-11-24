@@ -76,6 +76,10 @@ Docker revolutionizes development and deployment by introducing **containers**. 
 - **REST API:** Translates CLI commands (e.g., `docker run`) into HTTP requests for the Docker Daemon. This enables automation and integration with external tools.
 - **Docker Daemon:** The “engine” that handles pulling images, building containers, and other core functions.
 
+## OCI
+- The Open Container Initiative (OCI) is an open governance project under the Linux Foundation that defines industry-wide, vendor-neutral standards for container formats and runtimes.
+- It ensures that containers built with one tool (like Docker) can be stored, distributed, and run by any other compliant tool (like Podman, containerd, or Kubernetes) without vendor lock-in.
+
 ## **Docker vs Podman**
 
 Docker and Podman both run OCI containers and share most of the same CLI, so the real differences come down to architecture and ecosystem.
