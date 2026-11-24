@@ -80,7 +80,7 @@ Docker revolutionizes development and deployment by introducing **containers**. 
 - The Open Container Initiative (OCI) is an open governance project under the Linux Foundation that defines industry-wide, vendor-neutral standards for container formats and runtimes.
 - It ensures that containers built with one tool (like Docker) can be stored, distributed, and run by any other compliant tool (like Podman, containerd, or Kubernetes) without vendor lock-in.
 
-## **Docker vs Podman**
+## **Docker vs Podman(Daemonless + rootless)**
 
 Docker and Podman both run OCI containers and share most of the same CLI, so the real differences come down to architecture and ecosystem.
 
