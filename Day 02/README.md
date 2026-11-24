@@ -1,16 +1,5 @@
 # Day 2: Write Your First Dockerfile, and Push to Docker Hub | CKA Certification Course 2025
 
-## Video reference for Day 2 is the following:
-
-[![Watch the video](https://img.youtube.com/vi/YVq-3UWt63U/maxresdefault.jpg)](https://youtu.be/YVq-3UWt63U)
-
----
-## ⭐ Support the Project  
-If this **repository** helps you, give it a ⭐ to show your support and help others discover it! 
-
----
-
-
 ## **Understanding `docker pull docker.io/library/ubuntu:latest`**
 
 ![Ubuntu Pull Process Illustration](/images/2a.png)

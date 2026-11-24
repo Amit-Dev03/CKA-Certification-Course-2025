@@ -1,15 +1,5 @@
 # Day 3: Docker Flags, Deep Dive into Dockerfile, and Exposing Containers | CKA Certification Course 2025
 
-## Video reference for Day 3 is the following:
-
-[![Watch the video](https://img.youtube.com/vi/MQ8fYqZwiQs/maxresdefault.jpg)](https://youtu.be/MQ8fYqZwiQs)
-
----
-## ⭐ Support the Project  
-If this **repository** helps you, give it a ⭐ to show your support and help others discover it! 
-
----
-
 ### **Important Docker Flags**
 
 ![Docker Flags Overview](/images/3a.png)
@@ -99,12 +89,3 @@ CMD ["python", "app.py"]
 | **Complex Commands**     | Supports more complex commands, like chaining commands with `&&` & `double pipe`. | Best suited for simple commands with no shell features. |
 | **Common Use Case**      | When you need shell features, like piping or chaining commands. | When you want the command to run directly and efficiently. |
 | **Examples**             | `CMD echo "Hello World"`                           | `CMD ["echo", "Hello World"]`                      |
-
----
-### **Conclusion**
-
-Understanding these Docker flags, Dockerfile instructions, and their nuances is critical for anyone working with containers. From running detached containers with port mappings to defining clear image build instructions in Dockerfiles, these concepts lay the foundation for effective containerized application development. Mastering the differences between `CMD` forms and leveraging Docker’s powerful commands will greatly enhance your ability to create scalable, efficient, and reliable containerized systems.  
-
-Remember, Docker simplifies the development, testing, and deployment process by providing consistency and portability across environments. As you dive deeper, these core concepts will serve as building blocks for more advanced workflows, including multi-container orchestration and CI/CD pipelines. 🚀
-
----
