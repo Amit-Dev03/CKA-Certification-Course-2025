@@ -1,16 +1,5 @@
 # Day 4: Docker Flags, Deep Dive into Dockerfile, and Exposing Containers | CKA Certification Course 2025
 
-## Video reference for Day 4 is the following:
-
-[![Watch the video](https://img.youtube.com/vi/34l1gRszQS4/maxresdefault.jpg)](https://youtu.be/34l1gRszQS4)
-
----
-## ⭐ Support the Project  
-If this **repository** helps you, give it a ⭐ to show your support and help others discover it! 
-
----
-
-
 ## **Specifying a Custom Dockerfile Name and Understanding the Build Command in Docker**
 
 When working with Docker, the default name for a Dockerfile is **`Dockerfile`**. However, you can specify a custom name to suit different purposes (e.g., development vs. production environments). This flexibility allows better organization of your project while leveraging Docker's powerful build capabilities.
@@ -97,12 +86,3 @@ While both `CMD` and `ENTRYPOINT` define what commands should run in a container
 - **Dangling images**: Images that are no longer tagged or associated with any container.
 - **Delete a specific image**: `docker rmi <image_id>`
 - **Delete all unused images (including dangling images)**: `docker image prune -a`
-
----
-
-### **Conclusion**
-Understanding how to use custom-named Dockerfiles and the `docker build` command gives you greater flexibility in managing containerized applications. By mastering `CMD` and `ENTRYPOINT`, you'll better control container behavior, and by leveraging Docker commands effectively, you'll improve the efficiency of both development and deployment workflows. Keep exploring these concepts to build scalable, modular, and well-optimized Docker environments!
-
-For further reading: [Docker Best Practices: Choosing Between RUN, CMD, and ENTRYPOINT](https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/)
-
----
