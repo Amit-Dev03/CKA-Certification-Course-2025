@@ -82,7 +82,7 @@ Kubernetes operates on a master-worker architecture, where:
 ![Alt text](/images/7d.png)
 
 1. **Python Frontend to Redis Service:**
-    * The Python frontend attempts to connect to the Redis Service using the Service’s DNS name. DNS name to IP translation is primarily performed by CoreDNS, which replaced kube-DNS as the default DNS server within Kubernetes.
+    * The Python frontend attempts to connect to the Redis Service using the Service’s DNS name i.e. `<service-name>.<namespace>.svc.cluster.local`. DNS name to IP translation is primarily performed by CoreDNS, which replaced kube-DNS as the default DNS server within Kubernetes.
 
 2. **kube-proxy’s Role:**
     * **Interception:** kube-proxy on the node where the Python frontend Pod is running intercepts the outgoing network traffic destined for the Redis Service’s ClusterIP.
