@@ -1,15 +1,4 @@
 # Day 5: Docker Multi-Stage Builds & Image Optimization | CKA Certification Course 2025
-
-## Video reference for Day 5 is the following:
-
-[![Watch the video](https://img.youtube.com/vi/8q3pJfE6Z_E/maxresdefault.jpg)](https://www.youtube.com/watch?v=8q3pJfE6Z_E&ab_channel=CloudWithVarJosh)
-
----
-## ⭐ Support the Project  
-If this **repository** helps you, give it a ⭐ to show your support and help others discover it! 
-
----
-
 ## **Compiled vs. Interpreted Languages**
 
 ### **Compiled Languages**
@@ -129,12 +118,4 @@ When building Docker images, instructions like `FROM`, `RUN`, `COPY`, and `ADD` 
 ### **Best Practices**
 - Combine multiple commands into a single `RUN` instruction using `&&` to reduce the number of layers.  
 - Use `.dockerignore` to exclude unnecessary files from the build context.  
-- Leverage **multi-stage builds** to discard build-stage artifacts and optimize the final image size.  
-
----
-
-### **Conclusion**
-
-Understanding the differences between compiled and interpreted languages provides insights into application behavior and deployment needs. Docker's **multi-stage builds** offer a powerful way to manage production environments by separating build and runtime stages, ensuring smaller images, faster deployments, and enhanced security.  
-
-By optimizing layer creation, leveraging build contexts efficiently, and using multi-stage builds, you can create scalable and resource-efficient Docker images for any application.
+- Leverage **multi-stage builds** to discard build-stage artifacts and optimize the final image size.
