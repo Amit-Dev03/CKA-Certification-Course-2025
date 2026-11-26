@@ -45,7 +45,7 @@ This command helps you identify the API group, version, and shortnames to work w
 
 ### **What is a ReplicationController?**
 - Ensures a specified number of pod replicas are running at any given time.
-- Any pod with **matching labels** becomes part of the rc, `regardless of how it was created`.
+- <u>Any pod with <strong>matching labels</strong> becomes part of the rc</u>, `regardless of how it was created`.
 
 ### **Labels and Selectors**
 
