@@ -46,6 +46,9 @@ This command helps you identify the API group, version, and shortnames to work w
 ### **What is a ReplicationController?**
 - Ensures a specified number of pod replicas are running at any given time.
 - <u>Any pod with <strong>matching labels</strong> becomes part of the rc</u>, `regardless of how it was created`.
+- A ReplicationController is a k8s recource, that only counts and manages pods that match its selector (app: nginx).
+Suppose we have replicas: 2
+Then , If a pod have the app: nginx label, the ReplicationController would have adopted it and only created 1 new pod (to meet its replicas count).
 
 ### **Labels and Selectors**
 
